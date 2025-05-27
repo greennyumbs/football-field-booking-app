@@ -4,12 +4,22 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  transition: background 0.3s ease;
+}
+
+/* Dark mode styles */
+.dark .App {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 
 /* Mobile styles */
 @media (max-width: 767px) {
   .App {
     background: #f8fafc;
+  }
+  
+  .dark .App {
+    background: #0f172a;
   }
 }
 
@@ -18,12 +28,20 @@
   .App {
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   }
+  
+  .dark .App {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
 }
 
 /* Desktop styles */
 @media (min-width: 1024px) {
   .App {
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f8fafc 100%);
+  }
+  
+  .dark .App {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 70%, #0f172a 100%);
   }
 }
 
@@ -44,10 +62,19 @@ html {
 .App::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
+  transition: background 0.3s ease;
 }
 
 .App::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.2);
+}
+
+.dark .App::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .App::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* Animation utilities */
